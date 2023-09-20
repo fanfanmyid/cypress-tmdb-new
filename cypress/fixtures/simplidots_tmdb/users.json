@@ -1,0 +1,56 @@
+{
+  "staging": {
+    "primary": {
+      "username": "fanfanmyid",
+      "password": "fanfanmyid"
+    },
+    "secondary": {
+      "username": "fanfanmyid",
+      "password": "123456"
+    },
+    "tertiary": {
+      "username": "fanfanmyid123",
+      "password": "fanfanmyid"
+    },
+    "quaternary": {
+      "username": "fanfanmyid123",
+      "password": "fanfanmyid123"
+    }
+  },
+  "release": {
+    "primary": {
+      "username": "fanfanmyid",
+      "password": "fanfanmyid"
+    },
+    "secondary": {
+      "username": "fanfanmyid",
+      "password": "123456"
+    },
+    "tertiary": {
+      "username": "fanfanmyid123",
+      "password": "fanfanmyid"
+    },
+    "quaternary": {
+      "username": "fanfanmyid123",
+      "password": "fanfanmyid123"
+    }
+  },
+  "production": {
+    "primary": {
+      "username": "fanfanmyid",
+      "password": "fanfanmyid"
+    },
+    "secondary": {
+      "username": "fanfanmyid",
+      "password": "123456"
+    },
+    "tertiary": {
+      "username": "fanfanmyid123",
+      "password": "fanfanmyid"
+    },
+    "quaternary": {
+      "username": "fanfanmyid123",
+      "password": "fanfanmyid123"
+    }
+  }
+}
