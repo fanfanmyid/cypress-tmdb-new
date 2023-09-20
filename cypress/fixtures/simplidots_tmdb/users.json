@@ -1,0 +1,56 @@
+{
+  "staging": {
+    "primary": {
+      "username": "dummy-valid-username",
+      "password": "dummy-valid-username"
+    },
+    "secondary": {
+      "username": "dummy-valid-username",
+      "password": "dummy-wrong-password"
+    },
+    "tertiary": {
+      "username": "dummy-invalid-username",
+      "password": "dummy-valid-username"
+    },
+    "quaternary": {
+      "username": "dummy-invalid-username",
+      "password": "dummy-invalid-username"
+    }
+  },
+  "release": {
+    "primary": {
+      "username": "dummy-valid-username",
+      "password": "dummy-valid-username"
+    },
+    "secondary": {
+      "username": "dummy-valid-username",
+      "password": "dummy-wrong-password"
+    },
+    "tertiary": {
+      "username": "dummy-invalid-username",
+      "password": "dummy-valid-username"
+    },
+    "quaternary": {
+      "username": "dummy-invalid-username",
+      "password": "dummy-invalid-username"
+    }
+  },
+  "production": {
+    "primary": {
+      "username": "dummy-valid-username",
+      "password": "dummy-valid-username"
+    },
+    "secondary": {
+      "username": "dummy-valid-username",
+      "password": "dummy-wrong-password"
+    },
+    "tertiary": {
+      "username": "dummy-invalid-username",
+      "password": "dummy-valid-username"
+    },
+    "quaternary": {
+      "username": "dummy-invalid-username",
+      "password": "dummy-invalid-username"
+    }
+  }
+}

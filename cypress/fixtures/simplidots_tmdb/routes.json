@@ -1,0 +1,14 @@
+{
+  "commonPaths": {},
+  "envs": {
+    "staging": {
+      "baseUrl": "https://www.themoviedb.org/"
+    },
+    "release": {
+      "baseUrl": "https://www.themoviedb.org/"
+    },
+    "production": {
+      "baseUrl": "https://www.themoviedb.org/"
+    }
+  }
+}
