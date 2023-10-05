@@ -1,0 +1,211 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 4,
+    "pending": 0,
+    "failures": 2,
+    "start": "2023-10-05T13:10:10.902Z",
+    "end": "2023-10-05T13:10:30.183Z",
+    "duration": 19281,
+    "testsRegistered": 6,
+    "passPercent": 66.66666666666666,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ddcd2a2a-5214-4dd6-bc51-3b79d57a0d5a",
+      "title": "",
+      "fullFile": "cypress/e2e/simplidots_tmdb/login.cy.ts",
+      "file": "cypress/e2e/simplidots_tmdb/login.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "fd12775a-08aa-4557-adf0-ad4bbbbb72ad",
+          "title": "Authentication",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Auth-Login#1 - Successfully Login ",
+              "fullTitle": "Authentication Auth-Login#1 - Successfully Login ",
+              "timedOut": null,
+              "duration": 5272,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_pages_loginPage__WEBPACK_IMPORTED_MODULE_1___default.a.doLogin(_support_helpers__WEBPACK_IMPORTED_MODULE_0__[\"users\"].primary.username, _support_helpers__WEBPACK_IMPORTED_MODULE_0__[\"users\"].primary.password);\ncy.get('.about > :nth-child(1) > h2 > a').should('have.text', 'fanfanmyid');",
+              "err": {},
+              "uuid": "cd60c174-d4f9-4e6c-9d60-29d9e4a499c2",
+              "parentUUID": "fd12775a-08aa-4557-adf0-ad4bbbbb72ad",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Auth-Login#2 - Failed Login using wrong password ",
+              "fullTitle": "Authentication Auth-Login#2 - Failed Login using wrong password ",
+              "timedOut": null,
+              "duration": 2325,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_pages_loginPage__WEBPACK_IMPORTED_MODULE_1___default.a.doLogin(_support_helpers__WEBPACK_IMPORTED_MODULE_0__[\"users\"].secondary.username, _support_helpers__WEBPACK_IMPORTED_MODULE_0__[\"users\"].secondary.password);\ncy.get('.background_color > :nth-child(1)').should('contain.text', 'There was a problem');",
+              "err": {},
+              "uuid": "c183e310-aeb3-4135-8be4-1995d10dd4a5",
+              "parentUUID": "fd12775a-08aa-4557-adf0-ad4bbbbb72ad",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Auth-Login#3 - Failed Login using wrong username ",
+              "fullTitle": "Authentication Auth-Login#3 - Failed Login using wrong username ",
+              "timedOut": null,
+              "duration": 3047,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_pages_loginPage__WEBPACK_IMPORTED_MODULE_1___default.a.doLogin(_support_helpers__WEBPACK_IMPORTED_MODULE_0__[\"users\"].tertiary.username, _support_helpers__WEBPACK_IMPORTED_MODULE_0__[\"users\"].tertiary.password);\ncy.get('.background_color > :nth-child(1)').should('contain.text', 'There was a problem');",
+              "err": {},
+              "uuid": "f4fa099f-2020-4d89-be73-d780703648da",
+              "parentUUID": "fd12775a-08aa-4557-adf0-ad4bbbbb72ad",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Auth-Login#4 - Failed Login using wrong username and password ",
+              "fullTitle": "Authentication Auth-Login#4 - Failed Login using wrong username and password ",
+              "timedOut": null,
+              "duration": 3258,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_pages_loginPage__WEBPACK_IMPORTED_MODULE_1___default.a.doLogin(_support_helpers__WEBPACK_IMPORTED_MODULE_0__[\"users\"].quaternary.username, _support_helpers__WEBPACK_IMPORTED_MODULE_0__[\"users\"].quaternary.password);\ncy.get('.background_color > :nth-child(1)').should('contain.text', 'There was a problem');",
+              "err": {},
+              "uuid": "28fca271-ba2b-41bd-8f49-762c77d69321",
+              "parentUUID": "fd12775a-08aa-4557-adf0-ad4bbbbb72ad",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Auth-Login#5 - Failed Login without fill username ",
+              "fullTitle": "Authentication Auth-Login#5 - Failed Login without fill username ",
+              "timedOut": null,
+              "duration": 1887,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_pages_loginPage__WEBPACK_IMPORTED_MODULE_1___default.a.doLogin('', _support_helpers__WEBPACK_IMPORTED_MODULE_0__[\"users\"].primary.password);\ncy.get('.background_color > :nth-child(1)').should('contain.text', 'There was a problem');",
+              "err": {
+                "message": "CypressError: `cy.type()` cannot accept an empty string. You need to actually type something.\n\nhttps://on.cypress.io/type",
+                "estack": "CypressError: `cy.type()` cannot accept an empty string. You need to actually type something.\n\nhttps://on.cypress.io/type\n    at Context.type (https://www.themoviedb.org/__cypress/runner/cypress_runner.js:143872:76)\n    at wrapped (https://www.themoviedb.org/__cypress/runner/cypress_runner.js:160844:19)\nFrom Your Spec Code:\n    at LoginPage.doLogin (webpack:///./cypress/pages/loginPage.js:13:29)\n    at Context.eval (webpack:///./cypress/e2e/simplidots_tmdb/login.cy.ts:25:17)",
+                "diff": null
+              },
+              "uuid": "d1812533-8226-407b-bc50-7141d9ab48b7",
+              "parentUUID": "fd12775a-08aa-4557-adf0-ad4bbbbb72ad",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Auth-Login#6 - Failed Login without fill password ",
+              "fullTitle": "Authentication Auth-Login#6 - Failed Login without fill password ",
+              "timedOut": null,
+              "duration": 1763,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_pages_loginPage__WEBPACK_IMPORTED_MODULE_1___default.a.doLogin(_support_helpers__WEBPACK_IMPORTED_MODULE_0__[\"users\"].primary.username, '');\ncy.get('.background_color > :nth-child(1)').should('contain.text', 'There was a problem');",
+              "err": {
+                "message": "CypressError: `cy.type()` cannot accept an empty string. You need to actually type something.\n\nhttps://on.cypress.io/type",
+                "estack": "CypressError: `cy.type()` cannot accept an empty string. You need to actually type something.\n\nhttps://on.cypress.io/type\n    at Context.type (https://www.themoviedb.org/__cypress/runner/cypress_runner.js:143872:76)\n    at wrapped (https://www.themoviedb.org/__cypress/runner/cypress_runner.js:160844:19)\nFrom Your Spec Code:\n    at LoginPage.doLogin (webpack:///./cypress/pages/loginPage.js:14:29)\n    at Context.eval (webpack:///./cypress/e2e/simplidots_tmdb/login.cy.ts:29:17)",
+                "diff": null
+              },
+              "uuid": "b7232427-afbd-475e-bc1a-0cd64b97498a",
+              "parentUUID": "fd12775a-08aa-4557-adf0-ad4bbbbb72ad",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "cd60c174-d4f9-4e6c-9d60-29d9e4a499c2",
+            "c183e310-aeb3-4135-8be4-1995d10dd4a5",
+            "f4fa099f-2020-4d89-be73-d780703648da",
+            "28fca271-ba2b-41bd-8f49-762c77d69321"
+          ],
+          "failures": [
+            "d1812533-8226-407b-bc50-7141d9ab48b7",
+            "b7232427-afbd-475e-bc1a-0cd64b97498a"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 17552,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quiet": true,
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
