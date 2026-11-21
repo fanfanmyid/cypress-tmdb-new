@@ -8,7 +8,7 @@ describe('Authentication', () => {
     })
     it('Auth-Login#1 - Successfully Login ', () => {
         loginPage.doLogin(users.primary.username,users.primary.password)
-        cy.get('.about > :nth-child(1) > h2 > a').should('have.text', 'fanfanmyid')
+        cy.get('.about > :nth-child(1) > h2 > a').should('have.text', users.primary.username)
     })
 
     it('Auth-Login#2 - Failed Login using wrong password ', () => {

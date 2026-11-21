@@ -1,28 +1,54 @@
 name: Build and deploy report
+
 on:
   push:
     branches:
       - main
   workflow_dispatch:
+
+permissions:
+  contents: write
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    container:
-      image: cypress/browsers:latest
-      options: --user 1001
     steps:
-      - uses: actions/checkout@v3
-      - name: Clean install
-        run: |
-          npm ci
-          $(npm bin)/cypress cache path
-          $(npm bin)/cypress cache list
-          $(npm bin)/cypress verify
-      - name: Run tests
-        run: npm run test
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run Cypress tests
+        id: cypress
+        uses: cypress-io/github-action@v6
         continue-on-error: true
-      - name: Deploy report
-        uses: peaceiris/actions-gh-pages@v3
+        with:
+          browser: chrome
+          command: npm run tmdb-staging
+        env:
+          # Real credentials live in repository secrets (Settings > Secrets and variables > Actions).
+          # Without them the suite runs against the committed dummy fixtures and failures are expected.
+          CYPRESS_PRIMARY_USER: ${{ secrets.TMDB_PRIMARY_USER }}
+          CYPRESS_PRIMARY_USER_PW: ${{ secrets.TMDB_PRIMARY_USER_PW }}
+          CYPRESS_SECONDARY_USER: ${{ secrets.TMDB_SECONDARY_USER }}
+          CYPRESS_SECONDARY_USER_PW: ${{ secrets.TMDB_SECONDARY_USER_PW }}
+          CYPRESS_TERTIARY_USER: ${{ secrets.TMDB_TERTIARY_USER }}
+          CYPRESS_TERTIARY_USER_PW: ${{ secrets.TMDB_TERTIARY_USER_PW }}
+          CYPRESS_QUATERNARY_USER: ${{ secrets.TMDB_QUATERNARY_USER }}
+          CYPRESS_QUATERNARY_USER_PW: ${{ secrets.TMDB_QUATERNARY_USER_PW }}
+
+      - name: Merge mochawesome JSON reports
+        if: always()
+        run: |
+          mkdir -p cypress/reports/mochareports
+          npm run mocha.combine-reports
+
+      - name: Generate HTML report
+        if: always()
+        run: npm run mocha.generate-report
+
+      - name: Deploy report to GitHub Pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./cypress/reports/mochareports
+          keep_files: false

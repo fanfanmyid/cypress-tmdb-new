@@ -1,56 +1,20 @@
 {
-  "staging": {
-    "primary": {
-      "username": "dummy-valid-username",
-      "password": "dummy-valid-username"
-    },
-    "secondary": {
-      "username": "dummy-valid-username",
-      "password": "dummy-wrong-password"
-    },
-    "tertiary": {
-      "username": "dummy-invalid-username",
-      "password": "dummy-valid-username"
-    },
-    "quaternary": {
-      "username": "dummy-invalid-username",
-      "password": "dummy-invalid-username"
-    }
+  "production": {
+    "primary": { "password": "dummy-valid-password", "username": "dummy-valid-username" },
+    "quaternary": { "password": "dummy-wrong-password", "username": "dummy-invalid-username" },
+    "secondary": { "password": "dummy-wrong-password", "username": "dummy-valid-username" },
+    "tertiary": { "password": "dummy-valid-password", "username": "dummy-invalid-username" }
   },
   "release": {
-    "primary": {
-      "username": "dummy-valid-username",
-      "password": "dummy-valid-username"
-    },
-    "secondary": {
-      "username": "dummy-valid-username",
-      "password": "dummy-wrong-password"
-    },
-    "tertiary": {
-      "username": "dummy-invalid-username",
-      "password": "dummy-valid-username"
-    },
-    "quaternary": {
-      "username": "dummy-invalid-username",
-      "password": "dummy-invalid-username"
-    }
+    "primary": { "password": "dummy-valid-password", "username": "dummy-valid-username" },
+    "quaternary": { "password": "dummy-wrong-password", "username": "dummy-invalid-username" },
+    "secondary": { "password": "dummy-wrong-password", "username": "dummy-valid-username" },
+    "tertiary": { "password": "dummy-valid-password", "username": "dummy-invalid-username" }
   },
-  "production": {
-    "primary": {
-      "username": "dummy-valid-username",
-      "password": "dummy-valid-username"
-    },
-    "secondary": {
-      "username": "dummy-valid-username",
-      "password": "dummy-wrong-password"
-    },
-    "tertiary": {
-      "username": "dummy-invalid-username",
-      "password": "dummy-valid-username"
-    },
-    "quaternary": {
-      "username": "dummy-invalid-username",
-      "password": "dummy-invalid-username"
-    }
+  "staging": {
+    "primary": { "password": "dummy-valid-password", "username": "dummy-valid-username" },
+    "quaternary": { "password": "dummy-wrong-password", "username": "dummy-invalid-username" },
+    "secondary": { "password": "dummy-wrong-password", "username": "dummy-valid-username" },
+    "tertiary": { "password": "dummy-valid-password", "username": "dummy-invalid-username" }
   }
 }

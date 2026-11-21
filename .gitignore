@@ -1,1 +1,19 @@
-node_modules
+# Dependencies
+node_modules/
+
+# Local secrets — never commit real credentials
+.env
+cypress.env.json
+cypress/fixtures/**/users.local.json
+cypress/configs/cypress.local.ts
+
+# Generated test artifacts (reports, videos, screenshots, downloads)
+cypress/reports/
+cypress/videos/
+cypress/screenshots/
+cypress/downloads/
+allure-report/
+allure-results/
+
+# OS / editor noise
+.DS_Store

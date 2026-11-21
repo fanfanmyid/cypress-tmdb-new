@@ -11,7 +11,8 @@ export const getFixture = (fileName) => {
   try {
     return require(`../fixtures/${getProductPath()}/${fileName}.json`)
   } catch (error) {
-    console.warn('users.local.json not existing')
+    // Optional fixture (e.g. users.local.json) — safe to ignore when missing
+    console.warn(`Fixture "${fileName}.json" not found for product "${product}"`)
   }
 }
 
@@ -20,47 +21,29 @@ export const routes = getFixture('routes').envs[env]
 const tmpUsers = getFixture('users')[env]
 const localUsersFile = getFixture('users.local')
 const localUsers = localUsersFile && localUsersFile[env]
-// This avoids using the same user when there are concurrent jobs and prevents tests from failing
-// Add a random number after user email
-// eg. test@gmail.com -> test+394@gmail.com
-// tmpUsers.primary.email = tmpUsers.primary.email.replace('@', `+${Math.floor(Math.random() * 1000)}@`)
 
-tmpUsers.primary.username = (
-  Cypress.env('PRIMARY_USER') ||
-  (localUsers && localUsers.primary.username) ||
-  tmpUsers.primary.username
-).toLowerCase()
+// Credential resolution order (first non-empty value wins):
+//   1. CYPRESS_<ROLE>_USER / CYPRESS_<ROLE>_USER_PW env vars (also settable via --env or cypress.env.json)
+//   2. cypress/fixtures/<product>/users.local.json (git-ignored, for local runs)
+//   3. cypress/fixtures/<product>/users.json (committed DUMMY placeholders only — never real credentials)
+// Example: CYPRESS_PRIMARY_USER=myuser CYPRESS_PRIMARY_USER_PW=secret npm run tmdb-staging
+const userRoles = ['primary', 'secondary', 'tertiary', 'quaternary'] as const
 
-tmpUsers.secondary.username = (
-  Cypress.env('SECONDARY_USER') ||
-  (localUsers && localUsers.secondary.username) ||
-  tmpUsers.secondary.username
-).toLowerCase()
+userRoles.forEach((role) => {
+  const roleKey = role.toUpperCase()
+  if (!tmpUsers[role]) return
 
-tmpUsers.tertiary.username = (
-    Cypress.env('TERTIARY_USER') ||
-    (localUsers && localUsers.tertiary.username) ||
-    tmpUsers.tertiary.username
-).toLowerCase()
+  tmpUsers[role].username = (
+    Cypress.env(`${roleKey}_USER`) ||
+    (localUsers && localUsers[role] && localUsers[role].username) ||
+    tmpUsers[role].username
+  ).toLowerCase()
 
-tmpUsers.quaternary.username = (
-    Cypress.env('QUATERNARY_USER') ||
-    (localUsers && localUsers.quaternary.username) ||
-    tmpUsers.quaternary.username
-).toLowerCase()
-
-
-tmpUsers.primary.password =
-  Cypress.env('PRIMARY_USER_PW') || (localUsers && localUsers.primary.password) || tmpUsers.primary.password
-
-tmpUsers.secondary.password =
-  Cypress.env('SECONDARY_USER_PW') || (localUsers && localUsers.secondary.password) || tmpUsers.secondary.password
-
-tmpUsers.tertiary.password =
-    Cypress.env('TERTIARY_USER_PW') || (localUsers && localUsers.tertiary.password) || tmpUsers.tertiary.password
-
-tmpUsers.quaternary.password =
-    Cypress.env('QUATERNARY_USER_PW') || (localUsers && localUsers.quaternary.password) || tmpUsers.quaternary.password
+  tmpUsers[role].password =
+    Cypress.env(`${roleKey}_USER_PW`) ||
+    (localUsers && localUsers[role] && localUsers[role].password) ||
+    tmpUsers[role].password
+})
 
 export const users = tmpUsers
 
