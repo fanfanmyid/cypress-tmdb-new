@@ -12,13 +12,13 @@
     "hasOther": false,
     "skipped": 5,
     "hasSkipped": true,
-    "start": "2026-11-21T13:13:56.921Z",
-    "end": "2026-11-21T13:13:57.409Z",
-    "duration": 488
+    "start": "2026-11-21T13:14:14.506Z",
+    "end": "2026-11-21T13:14:14.973Z",
+    "duration": 467
   },
   "results": [
     {
-      "uuid": "085a6c9b-0443-42e8-9cc2-42e0756b8750",
+      "uuid": "042d14a9-8af1-48e6-a4bb-a09348b7fcc3",
       "title": "",
       "fullFile": "cypress/e2e/simplidots_tmdb/login.cy.ts",
       "file": "cypress/e2e/simplidots_tmdb/login.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "ac95edfa-e458-4fc8-94ca-9c189fd018a5",
+          "uuid": "a5ac982d-a8fe-429c-a2b0-9ecbc9efc56e",
           "title": "Authentication",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Auth-Login#1 - Successfully Login ",
               "fullTitle": "Authentication Auth-Login#1 - Successfully Login ",
               "timedOut": null,
-              "duration": 354,
+              "duration": 365,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -48,11 +48,11 @@
               "code": "_pages_loginPage__WEBPACK_IMPORTED_MODULE_1___default.a.doLogin(_support_helpers__WEBPACK_IMPORTED_MODULE_0__[\"users\"].primary.username, _support_helpers__WEBPACK_IMPORTED_MODULE_0__[\"users\"].primary.password);\ncy.get('.about > :nth-child(1) > h2 > a').should('have.text', _support_helpers__WEBPACK_IMPORTED_MODULE_0__[\"users\"].primary.username);",
               "err": {
                 "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://www.themoviedb.org/\n\nThe response we received from your web server was:\n\n  > 403: Forbidden\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Authentication`",
-                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://www.themoviedb.org/\n\nThe response we received from your web server was:\n\n  > 403: Forbidden\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Authentication`\n    at <unknown> (http://localhost:39445/__cypress/runner/cypress_runner.js:147831:84)\n    at visitFailedByErr (http://localhost:39445/__cypress/runner/cypress_runner.js:147239:12)\n    at <unknown> (http://localhost:39445/__cypress/runner/cypress_runner.js:147814:13)\n    at tryCatcher (http://localhost:39445/__cypress/runner/cypress_runner.js:18744:23)\n    at Promise._settlePromiseFromHandler (http://localhost:39445/__cypress/runner/cypress_runner.js:16679:31)\n    at Promise._settlePromise (http://localhost:39445/__cypress/runner/cypress_runner.js:16736:18)\n    at Promise._settlePromise0 (http://localhost:39445/__cypress/runner/cypress_runner.js:16781:10)\n    at Promise._settlePromises (http://localhost:39445/__cypress/runner/cypress_runner.js:16857:18)\n    at _drainQueueStep (http://localhost:39445/__cypress/runner/cypress_runner.js:13451:12)\n    at _drainQueue (http://localhost:39445/__cypress/runner/cypress_runner.js:13444:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:39445/__cypress/runner/cypress_runner.js:13460:5)\n    at Async.drainQueues (http://localhost:39445/__cypress/runner/cypress_runner.js:13330:14)\nFrom Your Spec Code:\n    at Context.eval (webpack:///./cypress/e2e/simplidots_tmdb/login.cy.ts:6:0)",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://www.themoviedb.org/\n\nThe response we received from your web server was:\n\n  > 403: Forbidden\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Authentication`\n    at <unknown> (http://localhost:45509/__cypress/runner/cypress_runner.js:147831:84)\n    at visitFailedByErr (http://localhost:45509/__cypress/runner/cypress_runner.js:147239:12)\n    at <unknown> (http://localhost:45509/__cypress/runner/cypress_runner.js:147814:13)\n    at tryCatcher (http://localhost:45509/__cypress/runner/cypress_runner.js:18744:23)\n    at Promise._settlePromiseFromHandler (http://localhost:45509/__cypress/runner/cypress_runner.js:16679:31)\n    at Promise._settlePromise (http://localhost:45509/__cypress/runner/cypress_runner.js:16736:18)\n    at Promise._settlePromise0 (http://localhost:45509/__cypress/runner/cypress_runner.js:16781:10)\n    at Promise._settlePromises (http://localhost:45509/__cypress/runner/cypress_runner.js:16857:18)\n    at _drainQueueStep (http://localhost:45509/__cypress/runner/cypress_runner.js:13451:12)\n    at _drainQueue (http://localhost:45509/__cypress/runner/cypress_runner.js:13444:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:45509/__cypress/runner/cypress_runner.js:13460:5)\n    at Async.drainQueues (http://localhost:45509/__cypress/runner/cypress_runner.js:13330:14)\nFrom Your Spec Code:\n    at Context.eval (webpack:///./cypress/e2e/simplidots_tmdb/login.cy.ts:6:0)",
                 "diff": null
               },
-              "uuid": "9b0dc138-3e9c-4382-96d9-f1f3529f13a5",
-              "parentUUID": "ac95edfa-e458-4fc8-94ca-9c189fd018a5",
+              "uuid": "a5b82e7e-af7d-468e-8b06-be0f0986c6b0",
+              "parentUUID": "a5ac982d-a8fe-429c-a2b0-9ecbc9efc56e",
               "isHook": false,
               "skipped": false
             },
@@ -69,8 +69,8 @@
               "context": null,
               "code": "_pages_loginPage__WEBPACK_IMPORTED_MODULE_1___default.a.doLogin(_support_helpers__WEBPACK_IMPORTED_MODULE_0__[\"users\"].secondary.username, _support_helpers__WEBPACK_IMPORTED_MODULE_0__[\"users\"].secondary.password);\ncy.get('.background_color > :nth-child(1)').should('contain.text', 'There was a problem');",
               "err": {},
-              "uuid": "a4afebac-8460-4fe1-bea3-a83363183a3c",
-              "parentUUID": "ac95edfa-e458-4fc8-94ca-9c189fd018a5",
+              "uuid": "c77b2fe6-fedc-48a8-8e44-ab630d0a871b",
+              "parentUUID": "a5ac982d-a8fe-429c-a2b0-9ecbc9efc56e",
               "isHook": false,
               "skipped": true
             },
@@ -87,8 +87,8 @@
               "context": null,
               "code": "_pages_loginPage__WEBPACK_IMPORTED_MODULE_1___default.a.doLogin(_support_helpers__WEBPACK_IMPORTED_MODULE_0__[\"users\"].tertiary.username, _support_helpers__WEBPACK_IMPORTED_MODULE_0__[\"users\"].tertiary.password);\ncy.get('.background_color > :nth-child(1)').should('contain.text', 'There was a problem');",
               "err": {},
-              "uuid": "8ea40930-c03a-4ae7-98a7-362498d107e2",
-              "parentUUID": "ac95edfa-e458-4fc8-94ca-9c189fd018a5",
+              "uuid": "1f8ae690-3c28-41bd-b90e-4c924e107257",
+              "parentUUID": "a5ac982d-a8fe-429c-a2b0-9ecbc9efc56e",
               "isHook": false,
               "skipped": true
             },
@@ -105,8 +105,8 @@
               "context": null,
               "code": "_pages_loginPage__WEBPACK_IMPORTED_MODULE_1___default.a.doLogin(_support_helpers__WEBPACK_IMPORTED_MODULE_0__[\"users\"].quaternary.username, _support_helpers__WEBPACK_IMPORTED_MODULE_0__[\"users\"].quaternary.password);\ncy.get('.background_color > :nth-child(1)').should('contain.text', 'There was a problem');",
               "err": {},
-              "uuid": "07d92bf7-13c9-4fb1-9c41-240008991899",
-              "parentUUID": "ac95edfa-e458-4fc8-94ca-9c189fd018a5",
+              "uuid": "3e375c59-fecc-4145-aac5-95f8082be14c",
+              "parentUUID": "a5ac982d-a8fe-429c-a2b0-9ecbc9efc56e",
               "isHook": false,
               "skipped": true
             },
@@ -123,8 +123,8 @@
               "context": null,
               "code": "_pages_loginPage__WEBPACK_IMPORTED_MODULE_1___default.a.doLogin('', _support_helpers__WEBPACK_IMPORTED_MODULE_0__[\"users\"].primary.password);\ncy.get('.background_color > :nth-child(1)').should('contain.text', 'There was a problem');",
               "err": {},
-              "uuid": "e08adc59-6bcc-46e1-a2e8-3a881ed67524",
-              "parentUUID": "ac95edfa-e458-4fc8-94ca-9c189fd018a5",
+              "uuid": "da8598bd-aee9-426d-892f-3459cdc3de92",
+              "parentUUID": "a5ac982d-a8fe-429c-a2b0-9ecbc9efc56e",
               "isHook": false,
               "skipped": true
             },
@@ -141,8 +141,8 @@
               "context": null,
               "code": "_pages_loginPage__WEBPACK_IMPORTED_MODULE_1___default.a.doLogin(_support_helpers__WEBPACK_IMPORTED_MODULE_0__[\"users\"].primary.username, '');\ncy.get('.background_color > :nth-child(1)').should('contain.text', 'There was a problem');",
               "err": {},
-              "uuid": "24b3f8ab-eaf1-4c95-8711-00df55aabbb1",
-              "parentUUID": "ac95edfa-e458-4fc8-94ca-9c189fd018a5",
+              "uuid": "9dae029e-272b-4da3-9f56-fe9d87e94599",
+              "parentUUID": "a5ac982d-a8fe-429c-a2b0-9ecbc9efc56e",
               "isHook": false,
               "skipped": true
             }
@@ -150,17 +150,17 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "9b0dc138-3e9c-4382-96d9-f1f3529f13a5"
+            "a5b82e7e-af7d-468e-8b06-be0f0986c6b0"
           ],
           "pending": [],
           "skipped": [
-            "a4afebac-8460-4fe1-bea3-a83363183a3c",
-            "8ea40930-c03a-4ae7-98a7-362498d107e2",
-            "07d92bf7-13c9-4fb1-9c41-240008991899",
-            "e08adc59-6bcc-46e1-a2e8-3a881ed67524",
-            "24b3f8ab-eaf1-4c95-8711-00df55aabbb1"
+            "c77b2fe6-fedc-48a8-8e44-ab630d0a871b",
+            "1f8ae690-3c28-41bd-b90e-4c924e107257",
+            "3e375c59-fecc-4145-aac5-95f8082be14c",
+            "da8598bd-aee9-426d-892f-3459cdc3de92",
+            "9dae029e-272b-4da3-9f56-fe9d87e94599"
           ],
-          "duration": 354,
+          "duration": 365,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
